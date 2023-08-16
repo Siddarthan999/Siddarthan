@@ -14,8 +14,10 @@ import projectWeb6 from "../assets/img/phishdetector.png";
 import projectMob1 from "../assets/img/suggest-ai.jpeg";
 import projectMob2 from "../assets/img/daily-routine.jpg";
 
-import projectOther1 from "../assets/img/project-img3.png";
-import projectOther2 from "../assets/img/project-img3.png";
+import projectOther1 from "../assets/img/discord.png";
+import projectOther2 from "../assets/img/CryptoWallet.png";
+import projectOther3 from "../assets/img/voiceassistant.jpg";
+import projectOther4 from "../assets/img/climate.jpg";
 
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
@@ -37,6 +39,12 @@ export const Projects = () => {
       link: "https://real-estate-app-solidity.vercel.app/",
     },
     {
+      title: "Phishing Link Detector",
+      description: "Machine Learning Algorithms",
+      imgUrl: projectWeb6,
+      link: "https://github.com/Siddarthan999/PhishDetector.git",
+    },
+    {
       title: "SidGPT",
       description: "ChatGPT Clone",
       imgUrl: projectWeb3,
@@ -53,13 +61,7 @@ export const Projects = () => {
       description: "UI/UX Design - Figma",
       imgUrl: projectWeb5,
       link: "https://www.figma.com/file/YOGqF9lUWGpXIZkinJ8RkG/CAR-TRANSPORT?type=design&node-id=1%3A37&mode=design&t=836GzGNEfnOFmj47-1",
-    },
-    {
-      title: "Phish Detector",
-      description: "Machine Learning",
-      imgUrl: projectWeb6,
-      link: "https://github.com/Siddarthan999/PhishDetector.git",
-    },    
+    }, 
   ];
 
   const projectsMobile = [
@@ -85,11 +87,23 @@ export const Projects = () => {
       link: "https://discord.com/api/oauth2/authorize?client_id=1133393926489899089&permissions=21434035338304&scope=bot",
     },
     {
+      title: "Voice Assistant",
+      description: "Powered by ChatGPT and Google Voice Assistant to Assist you",
+      imgUrl: projectOther3,
+      link: "https://github.com/Siddarthan999/Voice-Assistant.git",
+    },
+    {
+      title: "Climate Prediction",
+      description: "Data Cleaning and Model Training",
+      imgUrl: projectOther4,
+      link: "https://github.com/Siddarthan999/DS-MINI-PROJECT",
+    },
+    {
       title: "Sidd Crypto Wallet",
       description: "A Secure Crypto Transfer Extension",
       imgUrl: projectOther2,
       link: ""
-    }
+    },
   ];
 
   return (
@@ -105,7 +119,7 @@ export const Projects = () => {
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
-                      <Nav.Link eventKey="first">Web Apps</Nav.Link>
+                      <Nav.Link eventKey="first">Web Apps/Designs</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                       <Nav.Link eventKey="second">Mobile Apps</Nav.Link>
