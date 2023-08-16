@@ -29,24 +29,29 @@ export const Newsletter = ({ status, message, onValidated }) => {
     <Col lg={12}>
       <div className="newsletter-bx wow slideInUp">
         <Row>
-          <Col lg={12} md={6} xl={5}>
+          <Col xs={12} md={6} xl={5}>
             <h3>Subscribe to our Newsletter<br /> & Never miss latest updates</h3>
             {status === 'sending' && <Alert variant="success">Success...</Alert>}
             {status === 'error' && <Alert variant="danger">{message}</Alert>}
             {status === 'success' && <Alert variant="success">{message}</Alert>}
           </Col>
-          <Col md={6} xl={7}>
+          <Col xs={12} md={6} xl={7}>
             <form onSubmit={sendEmail}>
               <div className="new-email-bx">
-                <input
-                  value={email}
-                  type="email"
-                  name="user_email"
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Email Address"
-                  required
-                />
-                <button type="submit">Submit</button>
+                <div className="input-group">
+                  <input
+                    value={email}
+                    type="email"
+                    name="user_email"
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Email Address"
+                    required
+                    className="form-control"
+                  />
+                  <div className="input-group-append">
+                    <button type="submit" className="btn btn-custom-small">Submit</button>
+                  </div>
+                </div>
               </div>
             </form>
           </Col>
