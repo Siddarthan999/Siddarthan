@@ -4,15 +4,19 @@ import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 
-import projectWeb1 from "../assets/img/real-estate1.png";
-import projectWeb2 from "../assets/img/solidity.png";
-import projectWeb3 from "../assets/img/sidgpt.png";
-import projectWeb4 from "../assets/img/bike-rental.png";
-import projectWeb5 from "../assets/img/car-transport.png";
+
+import projectWeb1 from "../assets/img/urlshortener.png";
+import projectWeb2 from "../assets/img/qr.png";
+import projectWeb3 from "../assets/img/currency.png";
+import projectWeb4 from "../assets/img/real-estate1.png";
+import projectWeb5 from "../assets/img/solidity.png";
 import projectWeb6 from "../assets/img/phishdetector.png";
+import projectWeb7 from "../assets/img/sidgpt.png";
 
 import projectMob1 from "../assets/img/suggest-ai.jpeg";
 import projectMob2 from "../assets/img/daily-routine.jpg";
+import projectMob3 from "../assets/img/car-transport.png";
+import projectMob4 from "../assets/img/bike-rental.png";
 
 import projectOther1 from "../assets/img/discord.png";
 import projectOther2 from "../assets/img/CryptoWallet.png";
@@ -27,15 +31,33 @@ export const Projects = () => {
 
   const projectsWeb = [
     {
+      title: "URL Shortener",
+      description: "Paste your URL and copy the shortened url",
+      imgUrl: projectWeb1,
+      link: "https://url-shortener-siddarthan999.vercel.app/",
+    },
+     {
+      title: "QR Generator",
+      description: "Generator QR Codes from url links",
+      imgUrl: projectWeb2,
+      link: "https://qr-generator-siddarthan999.vercel.app/",
+    },
+     {
+      title: "Currency Convertor",
+      description: "Stay ahead with Accurate Conversions",
+      imgUrl: projectWeb3,
+      link: "https://currency-convertor-siddarthan999.vercel.app/",
+    },
+    {
       title: "Real Estate - 1",
       description: "E-Commerce",
-      imgUrl: projectWeb1,
+      imgUrl: projectWeb4,
       link: "https://real-estate-locofy-siddarthan999.vercel.app/",
     },
     {
       title: "Real Estate - 2",
       description: "Purchase, Lend and Sell Properties using CryptoCurrency",
-      imgUrl: projectWeb2,
+      imgUrl: projectWeb5,
       link: "https://real-estate-app-solidity.vercel.app/",
     },
     {
@@ -47,21 +69,9 @@ export const Projects = () => {
     {
       title: "SidGPT",
       description: "ChatGPT Clone",
-      imgUrl: projectWeb3,
+      imgUrl: projectWeb7,
       link: "https://sid-gpt-a-chat-gpt-clone.vercel.app/",
     },
-    {
-      title: "Bike Rental",
-      description: "UI/UX Design - Figma",
-      imgUrl: projectWeb4,
-      link: "https://www.figma.com/file/lTkMnESzqMGPSds6uzyQ41/Bike-Retail?type=design&node-id=0%3A1&mode=design&t=c7s1WWd9unA6IkXy-1",
-    },
-    {
-      title: "Car Transport",
-      description: "UI/UX Design - Figma",
-      imgUrl: projectWeb5,
-      link: "https://www.figma.com/file/YOGqF9lUWGpXIZkinJ8RkG/CAR-TRANSPORT?type=design&node-id=1%3A37&mode=design&t=836GzGNEfnOFmj47-1",
-    }, 
   ];
 
   const projectsMobile = [
@@ -77,6 +87,18 @@ export const Projects = () => {
       imgUrl: projectMob2,
       link: "https://routine-siddarthan.glideapp.io/",
     },
+    {
+      title: "Bike Rental",
+      description: "UI/UX Design - Figma",
+      imgUrl: projectMob3,
+      link: "https://www.figma.com/file/lTkMnESzqMGPSds6uzyQ41/Bike-Retail?type=design&node-id=0%3A1&mode=design&t=c7s1WWd9unA6IkXy-1",
+    },
+    {
+      title: "Car Transport",
+      description: "UI/UX Design - Figma",
+      imgUrl: projectMob4,
+      link: "https://www.figma.com/file/YOGqF9lUWGpXIZkinJ8RkG/CAR-TRANSPORT?type=design&node-id=1%3A37&mode=design&t=836GzGNEfnOFmj47-1",
+    }, 
   ];
 
   const projectsOther = [
