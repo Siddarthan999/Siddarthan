@@ -6,7 +6,7 @@ import { ArrowDownRight, ArrowUp, ArrowUpRight, Code2, BriefcaseBusiness, Extern
 // const portrait = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Siddarthan-LuEtV1NF4KbQPublUeqTyXUyoiqbAE.png'
 const portrait = '/Siddarthan.png'
 // const hackathonImage = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Lw7iMr2kTNVIDWBKUn6jx7H47abABJ.png'
-const hackathonImage = '/Hackathon.png'
+const hackathonImage = '/Hackathon-2025.jpg'
 
 const projects = [
   { number: '01', title: 'Enterprise Discovery-to-Delivery Engine', type: 'AI / Enterprise Platform', description: 'An AI-powered Statement-of-Work platform that turns scattered enterprise knowledge into validated, AI-reviewed delivery plans.', detail: 'Built hybrid Vector + Graph RAG with multi-agent GRC validation, risk analysis, approvals, explainable Q&A, Neo4j, pgvector, Sentence Transformers, Ollama, Gemini, and Jira REST integration.', stack: 'Next.js · FastAPI · PostgreSQL · pgvector · Neo4j · Docker', hrefs: ['https://github.com/Siddarthan999/Enterprise-Discovery-to-Delivery-Engine'], video: true },
