@@ -29,22 +29,10 @@ const projects = [
       'Built hybrid Vector + Graph RAG with multi-agent GRC validation, risk analysis, approvals, explainable Q&A, Neo4j, pgvector, Sentence Transformers, Ollama, Gemini, and Jira REST integration.',
     stack: 'Next.js · FastAPI · PostgreSQL · pgvector · Neo4j · Docker',
     hrefs: ['https://github.com/Siddarthan999/Enterprise-Discovery-to-Delivery-Engine'],
-    // Existing demo video for this project
     videoIds: ['QdaFAsbB_xo'],
   },
   {
     number: '02',
-    title: 'Namaste Video Translator',
-    type: 'Applied AI / Product',
-    description:
-      'A video translation experience designed to make language accessibility feel like a natural layer of media.',
-    detail:
-      'A practical AI product surface with a clear media workflow and end-to-end translation experience.',
-    stack: 'Next.js · TypeScript · AI · Video',
-    hrefs: ['https://github.com/Siddarthan999/Namaste-Video-Translator-Final'],
-  },
-  {
-    number: '03',
     title: 'MCP AI + Key Vault',
     type: 'Hackathon / Developer Tooling',
     description:
@@ -55,11 +43,10 @@ const projects = [
       'https://github.com/Siddarthan999/C-To-The-Prime',
       'https://github.com/Siddarthan999/C-To-The-Prime-API-Key-Vault',
     ],
-    // >>> NEW: added your requested video (https://youtu.be/rP1yjAGjHdE)
     videoIds: ['rP1yjAGjHdE'],
   },
   {
-    number: '04',
+    number: '03',
     title: 'debounce-zen',
     type: 'Open Source / NPM',
     description:
@@ -70,6 +57,18 @@ const projects = [
       'https://www.npmjs.com/package/debounce-zen',
       'https://github.com/Siddarthan999/debounce-zen',
     ],
+  },
+  {
+    number: '04',
+    title: 'Namaste Video Translator',
+    type: 'Applied AI / Product',
+    description:
+      'A video translation experience designed to make language accessibility feel like a natural layer of media.',
+    detail:
+      'A practical AI product surface with a clear media workflow and end-to-end translation experience.',
+    stack: 'Next.js · TypeScript · AI · Video',
+    hrefs: ['https://github.com/Siddarthan999/Namaste-Video-Translator-Final'],
+    videoIds: ['_y2TVYYXEVA'],
   },
   {
     number: '05',
