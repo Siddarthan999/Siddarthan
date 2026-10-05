@@ -178,6 +178,39 @@ export default function Page() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  useEffect(() => {
+    const elements = document.querySelectorAll<HTMLElement>('[data-reveal]')
+    const revealAll = () => elements.forEach((element) => element.classList.add('is-visible'))
+
+    if (
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+      !('IntersectionObserver' in window)
+    ) {
+      revealAll()
+      return
+    }
+
+    document.documentElement.classList.add('motion-ready')
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible')
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0 },
+    )
+
+    elements.forEach((element) => observer.observe(element))
+
+    return () => {
+      observer.disconnect()
+      document.documentElement.classList.remove('motion-ready')
+    }
+  }, [])
+
   return (
     <main className="site-shell" id="top">
       {/* ---------- Nav ---------- */}
@@ -206,23 +239,23 @@ export default function Page() {
       {/* ---------- Hero ---------- */}
       <section className="hero">
         <div className="hero-copy">
-          <p className="eyebrow">Software engineer · Chennai, India</p>
-          <h1>
+          <p className="eyebrow" data-reveal>Software engineer · Chennai, India</p>
+          <h1 data-reveal>
             Systems
             <br />
             <em>with a point</em>
             <br />
             of view.
           </h1>
-          <p className="hero-intro">
+          <p className="hero-intro" data-reveal>
             I build full-stack products, developer platforms, and applied AI systems that move from
             interesting idea to useful thing.
           </p>
-          <a className="scroll-cue" href="#story">
+          <a className="scroll-cue" href="#story" data-reveal>
             <span className="scroll-line" /> Begin the story <ArrowDownRight size={17} />
           </a>
         </div>
-        <div className="hero-portrait-wrap">
+        <div className="hero-portrait-wrap" data-reveal>
           <div className="portrait-note">
             The person
             <br />
@@ -240,7 +273,7 @@ export default function Page() {
       {/* ---------- Statement ---------- */}
       <section className="statement" id="story">
         <p className="section-kicker">01 — A working belief</p>
-        <div className="statement-text">
+        <div className="statement-text" data-reveal>
           <p>
             Make the <span>complex</span> legible.
           </p>
@@ -256,15 +289,15 @@ export default function Page() {
       {/* ---------- Work / Projects ---------- */}
       <section className="work-section" id="work">
         <div className="section-heading">
-          <div>
+          <div data-reveal>
             <p className="section-kicker">02 — Independent work</p>
-            <h2>
+            <h2 data-reveal>
               Built to be
               <br />
               <em>used.</em>
             </h2>
           </div>
-          <p className="heading-aside">
+          <p className="heading-aside" data-reveal>
             Open each project
             <br />
             for the context <ArrowDownRight size={18} />
@@ -278,6 +311,7 @@ export default function Page() {
               <article className={`project-row ${isOpen ? 'is-open' : ''}`} key={project.number}>
                 <button
                   className="project-trigger"
+                  data-reveal
                   onClick={() => setOpenProject(isOpen ? null : project.number)}
                   aria-expanded={isOpen}
                 >
@@ -345,6 +379,7 @@ export default function Page() {
                   >
                     <button
                       className="experience-trigger"
+                      data-reveal
                       onClick={() => setOpenExperience(isOpen ? null : item.date)}
                       aria-expanded={isOpen}
                     >
@@ -392,7 +427,7 @@ export default function Page() {
       {/* ---------- Skills / Toolkit ---------- */}
       <section className="toolkit-section" id="skills">
         <p className="section-kicker">04 — Technical range</p>
-        <div className="toolkit-intro">
+        <div className="toolkit-intro" data-reveal>
           <h2>
             From first
             <br />
@@ -411,7 +446,7 @@ export default function Page() {
 
         <div className="capability-field">
           {skillGroups.map(([name, values], index) => (
-            <article className="capability-row" key={name}>
+            <article className="capability-row" key={name} data-reveal>
               <span className="capability-number">0{index + 1}</span>
               <h3>{name}</h3>
               <div className="capability-tools">
@@ -424,7 +459,7 @@ export default function Page() {
           ))}
         </div>
 
-        <div className="toolkit-footer">
+        <div className="toolkit-footer" data-reveal>
           <span>Not a checklist.</span>
           <p>The right tool is the one that makes the next decision clearer.</p>
         </div>
@@ -468,11 +503,11 @@ export default function Page() {
                 </>
               )
               return href ? (
-                <a className="certification-row" href={href} target="_blank" rel="noreferrer" key={name}>
+                <a className="certification-row" href={href} target="_blank" rel="noreferrer" key={name} data-reveal>
                   {content}
                 </a>
               ) : (
-                <div className="certification-row" key={name}>
+                <div className="certification-row" key={name} data-reveal>
                   {content}
                 </div>
               )
@@ -483,7 +518,7 @@ export default function Page() {
 
       {/* ---------- Footer / Contact ---------- */}
       <footer className="footer" id="contact">
-        <div className="footer-top">
+        <div className="footer-top" data-reveal>
           <p className="section-kicker">06 — Say hello</p>
           <h2>
             Have a good
