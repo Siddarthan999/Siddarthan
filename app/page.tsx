@@ -536,7 +536,7 @@ export default function Page() {
             <a href="https://github.com/siddarthan999" target="_blank" rel="noreferrer">
               <Code2 size={16} /> GitHub
             </a>
-            <a href="https://www.linkedin.com/in/siddarthan-n-118635224/" target="_blank" rel="noreferrer">
+            <a href="https://www.linkedin.com/in/siddarthan-n/" target="_blank" rel="noreferrer">
               <BriefcaseBusiness size={16} /> LinkedIn
             </a>
             <a href="mailto:siddarthan999@gmail.com">
